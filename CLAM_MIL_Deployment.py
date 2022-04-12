@@ -62,8 +62,8 @@ if __name__ == '__main__':
     reportFile.write(str(args))
     reportFile.write('-' * 30 + '\n')
     if args.extractFeature:                                      
-        imgs = os.listdir(args.datadir_train[0])
-        imgs = [os.path.join(args.datadir_train[0], i) for i in imgs]                            
+        imgs = os.listdir(args.datadir_test[0])
+        imgs = [os.path.join(args.datadir_test[0], i) for i in imgs]                            
         ExtractFeatures(data_dir = imgs, feat_dir = args.feat_dir, batch_size = args.batch_size, target_patch_size = -1, filterData = True)
     
     print('\nLOAD THE DATASET FOR TRAINING...\n')     
